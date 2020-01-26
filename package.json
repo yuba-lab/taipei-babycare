@@ -1,0 +1,29 @@
+{
+  "name": "taipei-babycare",
+  "version": "0.0.1",
+  "description": "",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "rimraf www/*js && mkdir -p www && cp favicon.png www/ && webpack -p",
+    "profile": "webpack -p --profile --json > compilation-stats.json",
+    "pretest": "yarn run build",
+    "test": "jest --coverage"
+  },
+  "license": "Unlicense",
+  "private": true,
+  "installConfig": {
+    "pnp": true
+  },
+  "devDependencies": {
+    "@babel/runtime": "^7.3.4",
+    "livescript": "1.5.0",
+    "node-fetch": "^2.3.0",
+    "preact": "10.0.0-alpha.2",
+    "rimraf": "^2.6.2",
+    "taiwan-invoice": "^0.0.1",
+    "web-app-tools": "^0.1.0-beta.14",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.2.1"
+  }
+}
